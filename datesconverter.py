@@ -31,22 +31,24 @@ day_dic = {
 }
 
 def convert_date(x):
+    '''Converts date of format MM-DD-YYYY to 
+    a format of Month Day, Year'''
     stripped = x.split("-")
 
-    #grab 1st element from stripped (month)
+    #grab 1st element from stripped array (month)
     #get converted month from month_dic dictionary
     month = stripped[0]
     converted_month = month_dic[month]
 
-    #grab 2nd element from stripped (day)
+    #grab 2nd element from stripped array (day)
     #get converted day from day_dic dictionary
     day = stripped[1]
     converted_day = day_dic[day]
 
-    #grab 3rd element from stripped (year)
+    #grab 3rd element from stripped array (year)
     year = stripped[2]
 
-    #concatenate month, day, year into variable results
+    #concatenate month, day, year into final format
     results = converted_month + " " + converted_day + ", " + year
 
     return results
